@@ -1,0 +1,5 @@
+1. Display year wise count { 2010 - 3, 2021 - 15 ......}
+2. Display the companies which made investor money zero
+3. Display stock which has given max profit
+4. Display stock which has given max profit in short period
+5. Display stock name and current price
