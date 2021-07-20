@@ -40,6 +40,27 @@ public class Employee {
 	public Dept getDept() {
 		return dept;
 	}
+
+	public void setEmpno(String empno) {
+		this.empno = empno;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public void setDept(Dept dept) {
+		this.dept = dept;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empno=" + empno + ", ename=" + ename + ", salary=" + salary + ", dept=" + dept + "]";
+	}
 	
 	
 
