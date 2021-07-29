@@ -4,87 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class IdGenerator {
+import com.careerit.cj.oop.account.Account;
 
-	private static String prefix = "SB";
-	private static long id = 1000000001;
 
-	public static String getNewId() {
-		return prefix + "" + id++;
-	}
-}
-class MaskUtil{
-	public static String maskUuid(String uuid) {
-		return "*********"+uuid.substring(uuid.length()-4);
-	}
-	public static String maskAccNumber(String accNumber) {
-		return "*********"+accNumber.substring(accNumber.length()-4);
-	}
-}
-
-class Account {
-
-	private String accNumber;
-	private String name;
-	private String uuid;
-	private String mobile;
-	private double balance;
-	private String city;
-
-	public Account(String name, double balance) {
-		this(name, "N/A", balance);
-	}
-
-	public Account(String name, String mobile, double balance) {
-		this(name, mobile, balance, "N/A");
-	}
-
-	public Account(String name, String mobile, double balance, String city) {
-		this(name, "N/A", mobile, balance, city);
-	}
-
-	public void deposit(double amount) {
-		this.balance += amount;
-		System.out.println("Your account :" + MaskUtil.maskAccNumber(accNumber)  + " is deposited  amount :" + amount
-				+ " and current blance is :" + balance);
-
-	}
-
-	public void withDraw(double amount) {
-
-		if (amount < this.balance) {
-			this.balance -= amount;
-			System.out.println("Your account :" + MaskUtil.maskAccNumber(accNumber) + " is withdrawn  amount :" + amount
-					+ " and current blance is :" + balance);
-		} else {
-			System.out.println("You don't have sufficient funds to withdraw :" + amount);
-		}
-	}
-
-	public Account(String name, String uuid, String mobile, double balance, String city) {
-		if (accNumber == null) {
-			this.accNumber = IdGenerator.getNewId();
-		}
-		this.name = name;
-		this.uuid = uuid;
-		this.mobile = mobile;
-		this.balance = balance;
-		this.city = city;
-	}
-
-	public void showAccountDetails() {
-		System.out.println("Account number :" + MaskUtil.maskAccNumber(accNumber) );
-		System.out.println("Name           :" + name);
-		System.out.println("UUID           :" + MaskUtil.maskUuid(uuid));
-		System.out.println("Mobile         :" + mobile);
-		System.out.println("Balance        :" + balance);
-		System.out.println("City           :" + city);
-	}
-
-	public String getAccNumber() {
-		return accNumber;
-	}
-}
 
 public class Manager {
 
@@ -189,8 +111,6 @@ public class Manager {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your name: ");
 		String name = sc.nextLine();
-		System.out.println("Enter your uuid: ");
-		String uuid = sc.nextLine();
 		System.out.println("Enter your mobile: ");
 		String mobile = sc.nextLine();
 		System.out.println("Enter your opening balance: ");
@@ -198,7 +118,7 @@ public class Manager {
 		sc.nextLine();
 		System.out.println("Enter the city name : ");
 		String city = sc.nextLine();
-		Account acc = new Account(name, uuid, mobile, balance, city);
+		Account acc = new Account(name,  balance);
 		return acc;
 	}
 
