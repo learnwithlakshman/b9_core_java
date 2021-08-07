@@ -10,7 +10,7 @@ public class Contact {
 		private String mobile;
 		
 		public Contact( String name, String email, String mobile) {
-			this.cid = ThreadLocalRandom.current().nextLong(10001, 100000);
+			
 			this.name = name;
 			this.email = email;
 			this.mobile = mobile;
@@ -38,6 +38,10 @@ public class Contact {
 		}
 		public void setMobile(String mobile) {
 			this.mobile = mobile;
+		}
+		@Override
+		public String toString() {
+			return "Contact [cid=" + cid + ", name=" + name + ", email=" + email + ", mobile=" + mobile + "]";
 		}
 		
 		
