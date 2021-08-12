@@ -1,0 +1,41 @@
+{
+  "concept": {
+    "name": "Core Java",
+    "questionCount": 3
+  },
+  "questions": [
+    {
+      "number": 1,
+      "question": "Which of the following is not a valid java key word?",
+      "answers": [
+        "final",
+        "int",
+        "string",
+        "if"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "number": 2,
+      "question": "What is the output of 5 << 2",
+      "answers": [
+        "20",
+        "1",
+        "2",
+        "15"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "number": 3,
+      "question": "Which of following is not valid syntax of main method?",
+      "answers": [
+        "public static void main(String... args){}",
+        "public final static void main(string[] args){}",
+        "public final static void main(final String... args){}",
+        "public final static void main(String... args){}"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+}

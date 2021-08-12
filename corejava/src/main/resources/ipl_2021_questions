@@ -1,0 +1,15 @@
+1.	Get players count of each country
+2.	Get players count of each team
+3.	Get all the team labels 
+4.	Get amount spent by each team 
+5.	Get amount spent on each role of the given team 
+6.	Get players of the given team and role
+7.	Get players of the given country 
+8.	Get player of the given country and role
+9.	Get all country names 
+10.	Get count of the players by role of the given team
+11.	Get the players who are paid price between in the given range
+12.	Get all the players in ascending order by price
+13.	Get max paid players
+14.	Get max paid players of each role
+15.	Get min amount paid players

@@ -1,0 +1,14 @@
+Snake YML
+
+	https://bitbucket.org/asomov/snakeyaml/wiki/Documentation
+
+Java to JSON using jackson
+
+    https://mkyong.com/java/jackson-2-convert-java-object-to-from-json/
+    
+    
+ Assignments Questions to Solve:
+ 
+ 1. Tenant Service
+ 2. Quiz
+ 3. IPL_2021 

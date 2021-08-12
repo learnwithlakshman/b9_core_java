@@ -5,6 +5,7 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
+@ToString
 public class Player {
 
         private String name;
