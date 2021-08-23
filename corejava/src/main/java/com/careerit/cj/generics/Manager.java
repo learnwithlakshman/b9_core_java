@@ -35,11 +35,12 @@ public class Manager {
 		mylist.remove(1002);
 	}
 
-	public static <T extends Number> List<T> removeDuplicates(List<T> list1, List<T> list2) {
+	public static <T> List<T> removeDuplicates(List<T> list1, List<T> list2) {
 		return List.of(list1, list2).stream().flatMap(List::stream).distinct().collect(Collectors.toList());
 	}
 	
 	public static MyList<?> getInstance(){
-		return new MyList<String>();
+		//Logic
+		return new MyList<Object>();
 	}
 }
