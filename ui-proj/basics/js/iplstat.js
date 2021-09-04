@@ -20,7 +20,6 @@ function showTeamAmountStat(){
         map.set(player["team"],list);
        }
     })
-
     teamStatArr = [];
     map.forEach((v,k)=>{
         team = k;
@@ -28,7 +27,6 @@ function showTeamAmountStat(){
         amount = v.map(ele=>ele["price"]).reduce((a,b)=>a+b);
         teamStat = {team:team,count:count,amount:amount};
         teamStatArr.push(teamStat);
-
     })
     displayTeamStatInformation(teamStatArr);
  }
