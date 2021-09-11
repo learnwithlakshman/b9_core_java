@@ -3,12 +3,5 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-    
-    <bean name="greet" class="com.careerit.score.Greetings">
-    	<property name="message" value="Welcome to spring core world!"></property>
-    </bean>    
-    
-    <bean name="empService" class="com.careerit.score.EmployeeService">
-    	
-    </bean>
-</beans>
+        <bean id="obj" class="com.careerit.springcore.scopes.DbSingletonScopeService"></bean>
+       </beans>
