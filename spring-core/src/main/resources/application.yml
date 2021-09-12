@@ -1,0 +1,23 @@
+app:
+  books:
+     - title: Let US C
+       price: 450
+     - title: Let US JAVA
+       price: 340
+     - title: Let US .Net
+       price: 450
+     - title: Let US PHP
+       price: 350
+       
+       
+tenant:
+   tenantList:
+     - name: KFC
+       email: admin@kfc.com
+       city: BLR
+     - name: SRF
+       email: admin@srf.com
+       city: GNT
+     - name: TATA
+       email: info@tata.com
+       city: BLR 
