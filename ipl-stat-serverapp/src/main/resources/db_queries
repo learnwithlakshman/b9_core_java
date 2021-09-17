@@ -1,0 +1,22 @@
+1. Get label, player count, total amount of each team
+
+2. Get label total amount
+
+
+3. Get all the labels
+
+
+4. Get label, player count, total amount of the given label
+
+
+5. Get role, role count of the given label
+
+
+6. Get name, role, price of the given label and role
+
+
+7. Display all the players of given the label group by team label
+
+8. All all players with filter
+
+9. Max paid player by role 
