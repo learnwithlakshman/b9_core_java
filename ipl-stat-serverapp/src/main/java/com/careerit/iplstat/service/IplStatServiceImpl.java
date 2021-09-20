@@ -27,8 +27,7 @@ public class IplStatServiceImpl implements IplStatService {
 
 	@Override
 	public List<PlayerCountAndAmountDTO> getPlayerCountAndAmountDetails() {
-		
-		return null;
+		return iplStatDao.selectPlayerCountAndAmountDetails();
 	}
 
 	@Override
@@ -48,8 +47,8 @@ public class IplStatServiceImpl implements IplStatService {
 
 	@Override
 	public List<RoleCountAndAmountDTO> getAmountAndPlayerCountBy(String label) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return iplStatDao.selectAmountAndPlayerCountBy(label);
 	}
 
 	@Override

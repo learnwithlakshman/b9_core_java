@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.careerit.iplstat.domain.Player;
 import com.careerit.iplstat.dto.PlayerCountAndAmountDTO;
 import com.careerit.iplstat.dto.PlayerDTO;
 import com.careerit.iplstat.dto.RoleCountAndAmountDTO;
@@ -30,15 +29,12 @@ public class IplStatDaoImpl implements IplStatDao {
 
 	@Override
 	public List<PlayerCountAndAmountDTO> selectPlayerCountAndAmountDetails() {
-		//Collection
-		List<Player> players = playerRepo.findAll();
-		
-		return null;
+		return playerRepo.selectTeamAmountAndPlayerCount();
 	}
 
 	@Override
 	public List<TeamAmountAndPlayerCountDTO> selectTeamAmountAndPlayerCount() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
@@ -51,8 +47,8 @@ public class IplStatDaoImpl implements IplStatDao {
 
 	@Override
 	public List<RoleCountAndAmountDTO> selectAmountAndPlayerCountBy(String label) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return playerRepo.selectRoleCountAndAmount(label);
 	}
 
 	@Override

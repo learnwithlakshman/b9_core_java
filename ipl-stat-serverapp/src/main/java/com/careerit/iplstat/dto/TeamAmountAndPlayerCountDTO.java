@@ -1,10 +1,7 @@
 package com.careerit.iplstat.dto;
 
-import lombok.Data;
+public interface TeamAmountAndPlayerCountDTO {
 
-@Data
-public class TeamAmountAndPlayerCountDTO {
-
-			private String teamLabel;
-			private double totalAmount;
+			public String getTeamLabel();
+			public double getTotalAmount();
 }

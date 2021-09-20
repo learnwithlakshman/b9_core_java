@@ -1,11 +1,8 @@
 package com.careerit.iplstat.dto;
 
-import lombok.Data;
+public interface RoleCountAndAmountDTO {
 
-@Data
-public class RoleCountAndAmountDTO {
-
-		private String role;
-		private long playerCount;
-		private double totalAmount;
+		 String getRole();
+		 long getPlayerCount();
+		 double getTotalAmount();
 }
