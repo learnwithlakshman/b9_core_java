@@ -47,14 +47,19 @@ public class IplStatDaoImpl implements IplStatDao {
 
 	@Override
 	public List<RoleCountAndAmountDTO> selectAmountAndPlayerCountBy(String label) {
-		
+
 		return playerRepo.selectRoleCountAndAmount(label);
 	}
 
 	@Override
 	public List<PlayerDTO> selectPlayerDetailsBy(String label, String role) {
-		// TODO Auto-generated method stub
-		return null;
+		return playerRepo.selectPlayerDetailsBy(label, role);
+	}
+
+	@Override
+	public List<PlayerDTO> selectPlayerDetailsBy(String label) {
+
+		return playerRepo.selectPlayerDetailsBy(label);
 	}
 
 }

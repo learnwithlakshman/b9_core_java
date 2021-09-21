@@ -18,4 +18,5 @@ public interface IplStatDao {
 	List<RoleCountAndAmountDTO> selectAmountAndPlayerCountBy(String label);
 
 	List<PlayerDTO> selectPlayerDetailsBy(String label, String role);
+	List<PlayerDTO> selectPlayerDetailsBy(String label);
 }

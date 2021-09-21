@@ -1,12 +1,12 @@
 package com.careerit.iplstat.dto;
 
-import lombok.Data;
+public interface PlayerDTO {
 
-@Data
-public class PlayerDTO {
+	String getRole();
 
-		private String role;
-		private String name;
-		private double amount;
-		private String label;
+	String getName();
+
+	double getAmount();
+
+	String getLabel();
 }

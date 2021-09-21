@@ -53,8 +53,13 @@ public class IplStatServiceImpl implements IplStatService {
 
 	@Override
 	public List<PlayerDTO> getPlayerDetailsBy(String label, String role) {
-		// TODO Auto-generated method stub
-		return null;
+		return iplStatDao.selectPlayerDetailsBy(label,role);
+	}
+
+	@Override
+	public List<PlayerDTO> getPlayerDetailsBy(String label) {
+		
+		return iplStatDao.selectPlayerDetailsBy(label);
 	}
 
 }

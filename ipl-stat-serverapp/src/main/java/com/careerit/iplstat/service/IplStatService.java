@@ -19,4 +19,5 @@ public interface IplStatService {
 	List<RoleCountAndAmountDTO> getAmountAndPlayerCountBy(String label);
 
 	List<PlayerDTO> getPlayerDetailsBy(String label, String role);
+	List<PlayerDTO> getPlayerDetailsBy(String label);
 }
