@@ -1,0 +1,54 @@
+
+<div class="row mt-3">
+
+        <div class="col">
+            <p class="bg-primary text-white py-1 px-1">Data Binding</p>
+
+            <img [src]="imgUrl">
+            <p (click)="convertCase()">{{message}}</p>
+            <input type="text" name="username" class="form-control" [(ngModel)]="username" placeholder="Enter username">
+
+            {{username}}
+        
+            <div *ngIf="servers.length > 0">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th [attr.colspan]="colNum" class="text-center">Server Details</th>
+                    </tr>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">IP</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let server of servers;index as i;" [style.background-color]="getColor(server)">
+                            <td>{{i+1}}</td>
+                            <td>{{server.ip}}</td>
+                            <td>{{server.location}}</td>
+                            <td><button class="btn" [class.btn-success]="server.status" [class.btn-danger]="!server.status">{{getStatus(server.status)}}</button></td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+            </div>
+        </div>
+
+        
+
+        <div class="col">
+            <p class="bg-primary text-white py-1 px-1">Todo Application</p>
+            <input type="text" name="todo" class="form-control" [(ngModel)]="todo" placeholder="Enter todo title" (keyup.enter)="addTodo()">
+
+            <div *ngIf="todos.length > 0" class="mt-2">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let ele of todos;index as i">{{ele}}<span style="float:right"><i class="fa fa-edit" (click)="editTodo(ele,i)" ></i>&nbsp;<i class="fa fa-trash" (click)="deleteTodo(ele,i)"></i></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col"></div>
+
+
+</div>

@@ -1,0 +1,29 @@
+<div class="row mt-2">
+
+        <div class="col">
+        <div *ngIf="teamAmount.length > 0">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Team name</th>
+                    <th scope="col">Amount</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let team of teamAmount;index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{team.teamName}}</td>
+                    <td>{{team.totalAmount | currency:'INR'}}</td>
+                </tr>
+             
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <div class="col">
+            <google-chart [data]="pieChart" *ngIf="data.length>0" (chartSelect)='select($event)'></google-chart>
+        </div>
+
+</div>
